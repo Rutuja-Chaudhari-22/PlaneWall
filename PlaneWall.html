@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane wall</title>
+    <link rel="stylesheet" href="/CSS/PlaneWall.css">
+</head>
+
+<body>
+    <div class="body">
+        <h1>Heat Conduction Through A Plane Wall</h1>
+        <img src="/plane wall.jpeg" alt="">
+
+
+        <!-- derivation -->
+        <div class="derivation">
+
+            <div>
+                <h2><i>STEP 1: DEFINE TERMS</i></h2>
+                <p>
+                    <b>L</b>=Thickness of plane Wall
+                    <br>
+                    <b>A</b>=Cross-Sectional Area
+                    <br>
+                    <b>K</b>=Thermal Conductivity
+                    <br>
+                    <b>T<sub>1</sub></b>=Temperature at phase 1
+                    <br>
+                    <b>T<sub>2</sub></b>=Temperature at phase 2
+                </p>
+            </div>
+
+            <div>
+                <h2><i>STEP 2: Apply general heat conduction equation in cartesian co-ordinates</i></h2>
+                <h3>&delta;<sup>2</sup>t / &delta;x<sup>2</sup> + &delta;<sup>2</sup>t / &delta;y<sup>2</sup> +
+                    &delta;<sup>2</sup>t / &delta;z<sup>2</sup> + q<sub>g</sub> / k = 1/&alpha; &delta;t / &delta;&tau;
+                </h3>
+            </div>
+            <br>
+
+            <div>
+                <h2><i>STEP 3: Use Conditions</i></h2>
+                <h3><i>Steady State ----> &delta;t/ &delta;&tau; = 0</i></h3>
+                <h3><i>One-Dimensional ----> &delta;<sup>2</sup>t/ &delta;y<sup>2</sup> = &delta;<sup>2</sup>t/
+                        &delta;z<sup>2</sup> = 0</i></h3>
+                <h3><i>No Heat Generation ----> q<sub>g</sub>/k = 0</i></h3>
+                <h3>&therefore; &delta;<sup>2</sup>t/&delta;x<sup>2</sup> = 0 <br><br>OR<br><br>
+                    &delta;<sup>2</sup>t/&delta;x<sup>2</sup> = 0</h3>
+            </div>
+
+            <h2><i>Step 4 : Integrating the equation Twice</i></h2>
+
+            <p><b>&delta;t/&delta;x = C<sub>1</sub></b></p>
+            <p><b>t = C<sub>1</sub> + C<sub>2</sub></b></p>
+            <pre>               ----1</pre>
+
+            <div>
+                <h2><i>Step 5 : Using Boundary conditions to find C<sub>1</sub> & C<sub>2</sub></i></h2>
+                <p>At, x = 0, t = t<sub>1</sub>
+                    <br>
+                    We get, t<sub>1</sub> = C<sub>2</sub>
+                    <br>
+                <p>At, x = L, t = t<sub>2</sub>
+                    <br>
+                    We get, C<sub>1</sub> = t<sub>2</sub> &minus; t<sub>1</sub>/L
+                </p>
+                <pre>             ----From 1</pre>
+                <p>t = (t<sub>2</sub> &minus; t<sub>1</sub>/L)x + t<sub>1</sub></p>
+                </p>
+            </div>
+
+            <div>
+                <h2 class="conclusion" style="color: blue;">Temperature Distribution across a wall is Linear.</h2>
+            </div>
+
+            <div>
+                <h2> Step 6 : Use Fourier<sub>'s</sub> Law</h2>
+                <p><strong> Q = K A &delta;t/&delta;x</strong></p>
+                <p style="color: rgb(36, 0, 219);">Find &delta;t/&delta;x</p>
+                <p>-----> &delta;/&delta;x[(t<sub>2</sub> &minus; t<sub>1</sub>/L)x + t<sub>1</sub>]</p>
+                <p>&delta;t/&delta;x = t<sub>2</sub> &minus; t<sub>1</sub>/L</p>
+                <p>Q = &minus; K A (t<sub>2</sub> &minus; t<sub>1</sub>/L)</p>
+                <p>= K(t<sub>1</sub> &minus;
+                    t<sub>2</sub>/L)</p>
+            </div>
+
+            <div>
+                <h2>Step 7 : Define Thermal resistance to heat Conduction</h2>
+                <p>(R<sub>th</sub>)<sub>cond</sub> = L/K A</p>
+                <p>Q = t<sub>1</sub> &minus; t<sub>2</sub>/(L/K A)</p>
+                <p>Q = t<sub>1</sub> &minus; t<sub>2</sub>/(R<sub>th</sub>)<sub>cond</sub></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
